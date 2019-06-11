@@ -1,0 +1,12 @@
+{% extends 'html/base.html' %}
+
+{% block body %}
+    <h1>작성완료</h1>
+    <hr />
+
+
+    <h2>작성내용은 title: {{ title }}</h2><p></p>
+    <h2>작성내용은 content: {{ content }}</h2>
+    <a href="/boards/new">작성페이지 가기</a>
+    <a href="/boards/">게시판가기</a>
+{% endblock %}

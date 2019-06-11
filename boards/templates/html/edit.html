@@ -1,0 +1,21 @@
+{% extends 'html/base.html' %}
+
+{% block body %}
+    <h1> 수정 화면 </h1>
+    <form action="/boards/create/" method="post" >
+        {% csrf_token %}
+        <label for="title">Title</label><br/>
+        <input name='title' id="title" type="text"> <br/><!-- 라벨의 이름을 인풋에서 title 로 정해준것 -->
+        <label for="content"> content </label><br/>
+        <textarea name="content" id="content">{{board.content}}</textarea><br />
+        <input type="submit" />
+
+        <!-- name 속성은  <form action="/html/create/"> 로 특정 서버로 보내는데 데이터를 담아서 함께보낼때
+         데이터의 이름을 정해주는것 (key 값) 그래서 받을때 네임을 찍어서 받을수 있음
+
+         submit 은 필수 form안에서 submit을 만나서 보내는 것
+         -->
+
+    </form>
+    <a href="/boards">되돌아가기</a>
+{% endblock %}
